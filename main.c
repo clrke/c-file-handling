@@ -13,7 +13,7 @@ int main(int argc, char const *argv[])
 		return 1;
 
 	while ((read = getline(&line, &len, fp)) != -1) {
-		line[read-1] = '\0';
+		line[read-1] = '\0'; // to remove that \n at the end of the line
 		fscanf(fp, "%f\n", &value);
 
 		printf("%s: %.2f\n", line, value);
